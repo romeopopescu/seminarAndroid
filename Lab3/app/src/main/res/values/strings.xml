@@ -10,4 +10,10 @@
     <string name="rbHBO">HBO</string>
     <string name="tvSpinner"> Please select the genre of the movie </string>
     <string name="btnSave">Save</string>
+
+    <string-array name="arrayMovieGenre">
+        <item> Comedy </item>
+        <item> Thriller </item>
+        <item> Psychological </item>
+    </string-array>
 </resources>
