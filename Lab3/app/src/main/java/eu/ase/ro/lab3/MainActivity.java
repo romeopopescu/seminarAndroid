@@ -18,16 +18,18 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    FloatingActionButton fab;
+    FloatingActionButton fabAdd, fabSend;
+    public static final String KEY_STRING = "sendString";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fab = findViewById(R.id.fabAddMovie);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        fabAdd = findViewById(R.id.fabAddMovie);
+
+        fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AddMovieActivity.class);
@@ -36,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+        fabSend = findViewById(R.id.fabSend);
+        fabSend.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String userInfo = "These are the user's info";
+                Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+                intent.putExtra()
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
