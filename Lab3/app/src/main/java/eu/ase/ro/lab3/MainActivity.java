@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fabAdd, fabSend;
     public static final String KEY_STRING = "sendString";
+    public static final String USER_NAME_KEY = "userNameKey";
+    public static final String USER_AGE_KEY = "userAgeKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String userInfo = "These are the user's info";
                 Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-                intent.putExtra()
+                intent.putExtra(KEY_STRING, userInfo);
+                startActivity(intent);
             }
         });
     }
@@ -58,8 +61,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.menu_option_1) {
+            String aboutInfo = "These are the user's details";
+            String userName = "userApp";
+            int userAge = 22;
+
+            Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
+//            aboutIntent.putExtra()
             Toast.makeText(getApplicationContext(),
                     R.string.option1, Toast.LENGTH_SHORT).show();
+
         }
         if(item.getItemId() == R.id.menu_option_2) {
             Toast.makeText(getApplicationContext(),

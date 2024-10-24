@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMovieTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fill in the title of the movie" />
@@ -41,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMovieDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" Fill in the release date of the movie" />
@@ -58,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMovieProfit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fill in the profit of the movie" />
