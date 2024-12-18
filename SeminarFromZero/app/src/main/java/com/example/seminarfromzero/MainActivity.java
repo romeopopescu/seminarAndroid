@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewMovie.setAdapter(movieAdapter);
         recyclerViewMovie.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        loadMovieList();
-        deleteMovie("homealone");
+//        loadMovieList();
+//        deleteMovie("homealone");
 
         //JSON Parsing
-//        Thread jsonParser = new Thread(new JSONParser());
-//        jsonParser.start();
+        Thread jsonParser = new Thread(new JSONParser());
+        jsonParser.start();
 
         //XML Parsing
 //        ExecutorService service = Executors.newSingleThreadExecutor();
@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             try {
-                URL url = new URL("https://pastebin.com/raw/P7y6KfMZ");
+                URL url = new URL("https://www.jsonkeeper.com/b/HXXZ");
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 InputStream inputStream = httpURLConnection.getInputStream();
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 inputStreamReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-
+                Log.e("JSON", line);
                 getMovieFromJson(line);
 
                 //varianta 1
