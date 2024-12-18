@@ -3,4 +3,17 @@
     <string name="tvMainActivity">Hello</string>
     <string name="menu_option1">Option 1</string>
     <string name="menu_option2">Option 2</string>
+    <string name="add_item">Add item</string>
+    <string name="title_hint">Please write the title of the movie</string>
+    <string name="profit_hint">Please write the profit of the movie</string>
+    <string name="date_hint">Please write the date of the movie</string>
+    <string name="tvAddMovies">Please select the genre of the movie</string>
+    <string name="rbNetflix">Netflix</string>
+    <string name="rbHBO">HBO</string>
+    <string name="addMovieButton">Add movie</string>
+    <string-array name="arrayGenre">
+        <item>Thriller</item>
+        <item>Comedy</item>
+        <item>Horror</item>
+    </string-array>
 </resources>
